@@ -1,0 +1,17 @@
+/*
+    Fonts
+*/
+
+@font-face {
+    font-family: 'Arkhip';
+    src: url('../fonts/arkhip.eot');
+    src: url('../fonts/arkhip.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/arkhip.woff2') format('woff2'),
+    url('../fonts/arkhip.woff') format('woff'),
+    url('../fonts/arkhip.ttf')  format('truetype'),
+    url('../fonts/arkhip.otf') format('opentype');
+}
+
+body {
+    font-family: "Arkhip", Monospaced, monospace;
+}
