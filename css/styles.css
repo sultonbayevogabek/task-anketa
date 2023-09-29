@@ -1,17 +1,332 @@
-/*
-    Fonts
-*/
+/* Fonts */
 
 @font-face {
+    font-display: swap;
     font-family: 'Arkhip';
+    font-style: normal;
+    font-weight: 400;
     src: url('../fonts/arkhip.eot');
     src: url('../fonts/arkhip.eot?#iefix') format('embedded-opentype'),
     url('../fonts/arkhip.woff2') format('woff2'),
     url('../fonts/arkhip.woff') format('woff'),
-    url('../fonts/arkhip.ttf')  format('truetype'),
-    url('../fonts/arkhip.otf') format('opentype');
+    url('../fonts/arkhip.ttf') format('truetype'),
+    url('../fonts/arkhip.svg#Arkhip') format('svg');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 200;
+    src: url('../fonts/gilroy_200.eot');
+    src: url('../fonts/gilroy_200.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/gilroy_200.woff2') format('woff2'),
+    url('../fonts/gilroy_200.woff') format('woff'),
+    url('../fonts/gilroy_200.ttf') format('truetype'),
+    url('../fonts/gilroy_200.svg#Gilroy') format('svg');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/gilroy_300.eot');
+    src: url('../fonts/gilroy_300.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/gilroy_300.woff2') format('woff2'),
+    url('../fonts/gilroy_300.woff') format('woff'),
+    url('../fonts/gilroy_300.ttf') format('truetype'),
+    url('../fonts/gilroy_300.svg#Gilroy') format('svg');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/gilroy_400.eot');
+    src: url('../fonts/gilroy_400.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/gilroy_400.woff2') format('woff2'),
+    url('../fonts/gilroy_400.woff') format('woff'),
+    url('../fonts/gilroy_400.ttf') format('truetype'),
+    url('../fonts/gilroy_400.svg#Gilroy') format('svg');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/gilroy_500.eot');
+    src: url('../fonts/gilroy_500.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/gilroy_500.woff2') format('woff2'),
+    url('../fonts/gilroy_500.woff') format('woff'),
+    url('../fonts/gilroy_500.ttf') format('truetype'),
+    url('../fonts/gilroy_500.svg#Gilroy') format('svg');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/gilroy_600.eot');
+    src: url('../fonts/gilroy_600.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/gilroy_600.woff2') format('woff2'),
+    url('../fonts/gilroy_600.woff') format('woff'),
+    url('../fonts/gilroy_600.ttf') format('truetype'),
+    url('../fonts/gilroy_600.svg#Gilroy') format('svg');
+}
+
+/* General styles */
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
 }
 
 body {
-    font-family: "Arkhip", Monospaced, monospace;
+    font-family: "Gilroy", "Courier New", monospace;
+    font-style: normal;
+    line-height: normal;
+    color: #451F18;;
+}
+
+input {
+    border: none;
+    border-radius: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+button:focus, a:focus {
+    outline: 2px dashed #451F18;
+    outline-offset: 4px;
+}
+
+a {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.form-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 140px 20px;
+}
+
+.form {
+    padding: 60px 100px 174px;
+    background-color: #F9F6F4;
+}
+
+.form-logo {
+    font-family: "Arkhip", "Courier New", monospace;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    text-align: center;
+    user-select: none;
+}
+
+.form-logo span:first-child {
+    display: block;
+    font-size: 25px;
+    font-style: normal;
+    background: url("../img/decoration/logo-decoration.png"), lightgray 50% / contain repeat-y;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+}
+
+.form-logo span:last-child {
+    display: block;
+    font-size: 10px;
+}
+
+.form-main {
+    padding-top: 60px;
+}
+
+.form-heading {
+    margin: 0 0 50px;
+    font-family: "Arkhip", "Courier New", sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.form-fieldset {
+    margin: 0 0 70px;
+    padding: 0;
+    border: none;
+}
+
+.form-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.form-label:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.form-label-text {
+    position: relative;
+    margin-right: 16px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.form-field {
+    flex-grow: 1;
+}
+
+.form-field::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-image: url("../img/decoration/border-decoration.png");
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: center;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 36px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 24px;
+    font-weight: 200;
+    background-color: transparent;
+    border: none;
+    appearance: none;
+}
+
+.form-control:focus {
+    outline: none;
+}
+
+.form-legend {
+    margin-bottom: 25px;
+}
+
+.form-legend h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.form-legend span {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.form-label--checkbox {
+    align-items: flex-start;
+}
+
+.form-checkbox-rect {
+    position: relative;
+    flex-shrink: 0;
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+    background-image: url("../img/icons/check-rectangle.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.form-checkbox-mark {
+    position: absolute;
+    top: -7px;
+    right: -4px;
+    opacity: 0;
+    transition: 0.1s opacity ease;
+}
+
+.form-checkbox {
+    display: none;
+}
+
+.form-checkbox:checked ~ .form-checkbox-rect .form-checkbox-mark {
+    opacity: 1;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+}
+
+.skills-item:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.js-level {
+    display: flex;
+    justify-content: space-between;
+}
+
+.js-level-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.js-level-radio {
+    display: none;
+}
+
+.js-level-img {
+    width: 85px;
+    height: 85px;
+    display: none;
+}
+
+.js-level-radio:checked ~ .js-level-black {
+    display: inline-block;
+}
+
+.js-level-radio:not(:checked) ~ .js-level-white {
+    display: inline-block;
+}
+
+.js-level-text {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.js-level-polygon {
+    width: 25px;
 }

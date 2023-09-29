@@ -11,8 +11,251 @@
 </head>
 <body>
 
-<div class="form">
+<div class="form-wrapper">
+    <div class="form">
+        <a class="form-logo" href="https://oneweb.uz" target="_blank">
+            <span>ONEWEB</span>
+            <span>Разработка сайтов</span>
+        </a>
 
+        <form class="form-main">
+            <h1 class="form-heading">Анкета</h1>
+
+            <fieldset class="form-fieldset">
+                <label class="form-label">
+                    <span class="form-label-text">Полное ФИО</span>
+                    <span class="form-field">
+                        <input class="form-control" type="text" value="Султонбаев Огабек Биродар угли" name="fullName">
+                    </span>
+                </label>
+
+                <label class="form-label">
+                    <span class="form-label-text">Год рождения</span>
+                    <span class="form-field">
+                        <select class="form-control" name="birthYear">
+                            <option value="1999" selected>1999</option>
+                            <option value="2000">2000</option>
+                            <option value="2001">2001</option>
+                            <option value="2002">2002</option>
+                            <option value="2003">2003</option>
+                            <option value="2004">2004</option>
+                            <option value="2005">2005</option>
+                            <option value="2006">2006</option>
+                            <option value="2007">2007</option>
+                        </select>
+                    </span>
+                </label>
+
+                <label class="form-label">
+                    <span class="form-label-text">Место жительства</span>
+                    <span class="form-field">
+                        <input class="form-control" type="text" value="г. Ташкент, Узбекистан" name="address">
+                    </span>
+                </label>
+
+                <label class="form-label">
+                    <span class="form-label-text">Телефон <span style="font-weight: 300">/</span> Телеграм</span>
+                    <span class="form-field">
+                        <input class="form-control" type="text" value="+998 99 963-97-73" name="contact">
+                    </span>
+                </label>
+
+                <label class="form-label">
+                    <span class="form-label-text">Почта</span>
+                    <span class="form-field">
+                        <input class="form-control" type="email" value="sultonbayevogabek@gmail.com" name="email">
+                    </span>
+                </label>
+            </fieldset>
+
+            <fieldset class="form-fieldset">
+                <legend class="form-legend">
+                    <h2>Расскажите о себе чекбоксами</h2>
+                    <span>Отметьте чекбоксами пункты, которые соответствуют вашим скиллам (пункт/пункт/пункт - пункты, в которых несколько технологий, оставьте только те, которыми владеете)</span>
+                </legend>
+
+                <div class="skills">
+                    <ul class="skills-list">
+                        <li class="skills-item">
+                            <label class="form-label form-label--checkbox">
+                                <input class="form-checkbox" type="checkbox" name="" value="" checked>
+                                <span class="form-checkbox-rect">
+                                    <img class="form-checkbox-mark" src="img/icons/check-mark.svg" alt="Checkbox mark icon">
+                                </span>
+                                <span class="form-label-text">Верстаю семантично</span>
+                            </label>
+                            <label class="form-label form-label--checkbox">
+                                <input class="form-checkbox" type="checkbox" name="" value="" checked>
+                                <span class="form-checkbox-rect">
+                                    <img class="form-checkbox-mark" src="img/icons/check-mark.svg" alt="Checkbox mark icon">
+                                </span>
+                                <span class="form-label-text">БЭМ/OOCSS</span>
+                            </label>
+                            <label class="form-label form-label--checkbox">
+                                <input class="form-checkbox" type="checkbox" name="" value="" checked>
+                                <span class="form-checkbox-rect">
+                                    <img class="form-checkbox-mark" src="img/icons/check-mark.svg" alt="Checkbox mark icon">
+                                </span>
+                                <span class="form-label-text">Stylus/LESS/SASS (подчекнуть то, чем пользуюсь)</span>
+                            </label>
+                            <label class="form-label form-label--checkbox">
+                                <input class="form-checkbox" type="checkbox" name="" value="" checked>
+                                <span class="form-checkbox-rect">
+                                    <img class="form-checkbox-mark" src="img/icons/check-mark.svg" alt="Checkbox mark icon">
+                                </span>
+                                <span class="form-label-text">Верстаю Pixel perfect</span>
+                            </label>
+                            <label class="form-label form-label--checkbox">
+                                <input class="form-checkbox" type="checkbox" name="" value="" checked>
+                                <span class="form-checkbox-rect">
+                                    <img class="form-checkbox-mark" src="img/icons/check-mark.svg" alt="Checkbox mark icon">
+                                </span>
+                                <span class="form-label-text">Я внимателен к деталям и перед отправкой на проверку проверяю внимательно
+                сделанную мной задачу сам</span>
+                            </label>
+                            <label class="form-label form-label--checkbox">
+                                <input class="form-checkbox" type="checkbox" name="" value="" checked>
+                                <span class="form-checkbox-rect">
+                                    <img class="form-checkbox-mark" src="img/icons/check-mark.svg" alt="Checkbox mark icon">
+                                </span>
+                                <span class="form-label-text">Я хорошо знаю jQuery</span>
+                            </label>
+                            <label class="form-label form-label--checkbox">
+                                <input class="form-checkbox" type="checkbox" name="" value="" checked>
+                                <span class="form-checkbox-rect">
+                                    <img class="form-checkbox-mark" src="img/icons/check-mark.svg" alt="Checkbox mark icon">
+                                </span>
+                                <span class="form-label-text">Я хорошо владею чистым Javascript</span>
+                            </label>
+                            <label class="form-label form-label--checkbox">
+                                <input class="form-checkbox" type="checkbox" name="" value="" checked>
+                                <span class="form-checkbox-rect">
+                                    <img class="form-checkbox-mark" src="img/icons/check-mark.svg" alt="Checkbox mark icon">
+                                </span>
+                                <span class="form-label-text">Я хорошо знаю Ajax</span>
+                            </label>
+                        </li>
+                    </ul>
+                    <ul class="skills-list">
+                        <li class="skills-item">
+                            <label class="form-label form-label--checkbox">
+                                <input class="form-checkbox" type="checkbox" name="" value="" checked>
+                                <span class="form-checkbox-rect">
+                                    <img class="form-checkbox-mark" src="img/icons/check-mark.svg" alt="Checkbox mark icon">
+                                </span>
+                                <span class="form-label-text">Я знаю Vue.js</span>
+                            </label>
+                            <label class="form-label form-label--checkbox">
+                                <input class="form-checkbox" type="checkbox" name="" value="" checked>
+                                <span class="form-checkbox-rect">
+                                    <img class="form-checkbox-mark" src="img/icons/check-mark.svg" alt="Checkbox mark icon">
+                                </span>
+                                <span class="form-label-text">Я умею пользоваться Git</span>
+                            </label>
+                            <label class="form-label form-label--checkbox">
+                                <input class="form-checkbox" type="checkbox" name="" value="">
+                                <span class="form-checkbox-rect">
+                                    <img class="form-checkbox-mark" src="img/icons/check-mark.svg" alt="Checkbox mark icon">
+                                </span>
+                                <span class="form-label-text">Я знаю и умею натягивать верстку на Wordpress</span>
+                            </label>
+                            <label class="form-label form-label--checkbox">
+                                <input class="form-checkbox" type="checkbox" name="" value="">
+                                <span class="form-checkbox-rect">
+                                    <img class="form-checkbox-mark" src="img/icons/check-mark.svg" alt="Checkbox mark icon">
+                                </span>
+                                <span class="form-label-text">Я знаю и уверенно применяю ACF в Wordpress</span>
+                            </label>
+                            <label class="form-label form-label--checkbox">
+                                <input class="form-checkbox" type="checkbox" name="" value="">
+                                <span class="form-checkbox-rect">
+                                    <img class="form-checkbox-mark" src="img/icons/check-mark.svg" alt="Checkbox mark icon">
+                                </span>
+                                <span class="form-label-text">Я знаю основы PHP и могу немного править код</span>
+                            </label>
+                            <label class="form-label form-label--checkbox">
+                                <input class="form-checkbox" type="checkbox" name="" value="">
+                                <span class="form-checkbox-rect">
+                                    <img class="form-checkbox-mark" src="img/icons/check-mark.svg" alt="Checkbox mark icon">
+                                </span>
+                                <span class="form-label-text">Я знаю OpenCart</span>
+                            </label>
+                            <label class="form-label form-label--checkbox">
+                                <input class="form-checkbox" type="checkbox" name="" value="" checked>
+                                <span class="form-checkbox-rect">
+                                    <img class="form-checkbox-mark" src="img/icons/check-mark.svg" alt="Checkbox mark icon">
+                                </span>
+                                <span class="form-label-text">Всегда в сети онлайн</span>
+                            </label>
+                            <label class="form-label form-label--checkbox">
+                                <input class="form-checkbox" type="checkbox" name="" value="">
+                                <span class="form-checkbox-rect">
+                                    <img class="form-checkbox-mark" src="img/icons/check-mark.svg" alt="Checkbox mark icon">
+                                </span>
+                                <span class="form-label-text">Я пунктуален и могу работать в сжатые сроки</span>
+                            </label>
+                            <label class="form-label form-label--checkbox">
+                                <input class="form-checkbox" type="checkbox" name="" value="" checked>
+                                <span class="form-checkbox-rect">
+                                    <img class="form-checkbox-mark" src="img/icons/check-mark.svg" alt="Checkbox mark icon">
+                                </span>
+                                <span class="form-label-text">Я могу быстро переключаться между задачами</span>
+                            </label>
+                            <label class="form-label form-label--checkbox">
+                                <input class="form-checkbox" type="checkbox" name="" value="">
+                                <span class="form-checkbox-rect">
+                                    <img class="form-checkbox-mark" src="img/icons/check-mark.svg" alt="Checkbox mark icon">
+                                </span>
+                                <span class="form-label-text">Я ленивый(-ая)</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-fieldset">
+                <legend class="form-legend">
+                    <h2>Уровень владения JavaScript, jQuery Задание №1</h2>
+                    <span>Ползунок должен двигаться и при смене позиции активная иконка выделяться цветом</span>
+                </legend>
+
+                <div class="js-level">
+                    <label class="js-level-label">
+                        <input class="js-level-radio" type="radio" name="jsLevel" value="bad">
+                        <img class="js-level-img js-level-black" src="img/icons/bad-black.png" alt="">
+                        <img class="js-level-img js-level-white" src="img/icons/bad-white.png" alt="">
+                        <img class="js-level-polygon" src="img/icons/polygon.svg" alt="">
+                        <span class="js-level-text">Не владею</span>
+                    </label>
+
+                    <label class="js-level-label">
+                        <input class="js-level-radio" type="radio" name="jsLevel" value="bad">
+                        <img class="js-level-img js-level-black" src="img/icons/normal-black.png" alt="">
+                        <img class="js-level-img js-level-white" src="img/icons/normal-white.png" alt="">
+                        <img class="js-level-polygon" src="img/icons/polygon.svg" alt="">
+                        <span class="js-level-text">Использую готовые решения</span>
+                    </label>
+
+                    <label class="js-level-label">
+                        <input class="js-level-radio" type="radio" name="jsLevel" value="bad">
+                        <img class="js-level-img js-level-black" src="img/icons/good-black.png" alt="">
+                        <img class="js-level-img js-level-white" src="img/icons/good-white.png" alt="">
+                        <img class="js-level-polygon" src="img/icons/polygon.svg" alt="">
+                        <span class="js-level-text">Использую готовые решения и умею их переделывать</span>
+                    </label>
+
+                    <label class="js-level-label">
+                        <input class="js-level-radio" type="radio" name="jsLevel" value="bad">
+                        <img class="js-level-img js-level-black" src="img/icons/pro-black.png" alt="">
+                        <img class="js-level-img js-level-white" src="img/icons/pro-white.png" alt="">
+                        <img class="js-level-polygon" src="img/icons/polygon.svg" alt="">
+                        <span class="js-level-text">Пишу сложный JS с нуля</span>
+                    </label>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
 </div>
 
 </body>
