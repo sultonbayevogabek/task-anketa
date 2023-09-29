@@ -290,8 +290,20 @@ ul {
 }
 
 .js-level {
+    position: relative;
     display: flex;
     justify-content: space-between;
+}
+
+.js-level::after {
+    content: "";
+    position: absolute;
+    top: 106px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: url("../img/decoration/logo-decoration.png"), lightgray 50% / contain repeat-y;
 }
 
 .js-level-label {
@@ -313,20 +325,24 @@ ul {
     display: none;
 }
 
-.js-level-radio:checked ~ .js-level-black {
-    display: inline-block;
-}
-
-.js-level-radio:not(:checked) ~ .js-level-white {
+.js-level-radio:checked ~ .js-level-black, .js-level-radio:not(:checked) ~ .js-level-white {
     display: inline-block;
 }
 
 .js-level-text {
+    position: relative;
+    padding-top: 42px;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
 }
 
 .js-level-polygon {
-    width: 25px;
+    width: 24px;
+    margin-top: -12px;
+    opacity: 0;
+}
+
+.js-level-radio:checked ~ .js-level-polygon {
+    opacity: 1;
 }
