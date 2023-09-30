@@ -127,6 +127,10 @@ ul {
     list-style-type: none;
 }
 
+img {
+    max-width: 100%;
+}
+
 .form-wrapper {
     max-width: 1400px;
     margin: 0 auto;
@@ -250,6 +254,10 @@ ul {
     align-items: flex-start;
 }
 
+.form-checkbox, .form-radio {
+    display: none;
+}
+
 .form-checkbox-rect {
     position: relative;
     flex-shrink: 0;
@@ -257,13 +265,15 @@ ul {
     width: 24px;
     height: 24px;
     margin-right: 16px;
-    background-image: url("../img/icons/check-rectangle.svg");
+    background-image: url("../img/icons/check-rectangle.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 .form-checkbox-mark {
+    width: 24px;
+    height: 24px;
     position: absolute;
     top: -7px;
     right: -4px;
@@ -271,11 +281,30 @@ ul {
     transition: 0.1s opacity ease;
 }
 
-.form-checkbox {
-    display: none;
+.form-checkbox:checked ~ .form-checkbox-rect .form-checkbox-mark {
+    opacity: 1;
 }
 
-.form-checkbox:checked ~ .form-checkbox-rect .form-checkbox-mark {
+.form-radio-circle {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    display: grid;
+    place-items: center;
+    padding: 6px;
+    margin-right: 16px;
+    background-image: url("../img/icons/radio-circle.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.form-radio-disc {
+    opacity: 0;
+    transition: 0.1s opacity ease;
+}
+
+.form-radio:checked ~ .form-radio-circle .form-radio-disc {
     opacity: 1;
 }
 
@@ -345,4 +374,22 @@ ul {
 
 .js-level-radio:checked ~ .js-level-polygon {
     opacity: 1;
+}
+
+.plans {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.plans .form-label--radio:not(:last-child) {
+    margin-right: 127px;
+}
+
+.form-fieldset--time .form-label:not(:last-child) {
+    margin-bottom: 70px;
+}
+
+.form-fieldset--time .form-field {
+    flex-grow: 0;
 }
