@@ -238,37 +238,178 @@
                 </legend>
 
                 <div class="js-level">
-                    <label class="js-level-label">
-                        <input class="js-level-radio" type="radio" name="jsLevel" value="bad">
-                        <img class="js-level-img js-level-black" src="img/icons/bad-black.png" alt="">
-                        <img class="js-level-img js-level-white" src="img/icons/bad-white.png" alt="">
-                        <img class="js-level-polygon" src="img/icons/polygon.png" alt="">
-                        <span class="js-level-text">Не владею</span>
-                    </label>
+                    <div class="js-level-images">
+                        <label class="js-level-label js-level-label--img" for="bad">
+                            <input class="js-level-radio" type="radio" name="jsLevel" id="bad" value="bad">
 
-                    <label class="js-level-label">
-                        <input class="js-level-radio" type="radio" name="jsLevel" value="bad">
-                        <img class="js-level-img js-level-black" src="img/icons/normal-black.png" alt="">
-                        <img class="js-level-img js-level-white" src="img/icons/normal-white.png" alt="">
-                        <img class="js-level-polygon" src="img/icons/polygon.png" alt="">
-                        <span class="js-level-text">Использую готовые решения</span>
-                    </label>
+                            <span class="js-level-img">
+                                <img class="js-level-white" src="img/icons/bad-white.png" alt="Bad icon">
+                                <img class="js-level-black" src="img/icons/bad-black.png" alt="Bad icon">
+                            </span>
+                        </label>
 
-                    <label class="js-level-label">
-                        <input class="js-level-radio" type="radio" name="jsLevel" value="bad">
-                        <img class="js-level-img js-level-black" src="img/icons/good-black.png" alt="">
-                        <img class="js-level-img js-level-white" src="img/icons/good-white.png" alt="">
-                        <img class="js-level-polygon" src="img/icons/polygon.png" alt="">
-                        <span class="js-level-text">Использую готовые решения и умею их переделывать</span>
-                    </label>
+                        <label class="js-level-label js-level-label--img" for="normal">
+                            <input class="js-level-radio" type="radio" name="jsLevel" id="normal" value="normal">
 
-                    <label class="js-level-label">
-                        <input class="js-level-radio" type="radio" name="jsLevel" value="bad" checked>
-                        <img class="js-level-img js-level-black" src="img/icons/pro-black.png" alt="">
-                        <img class="js-level-img js-level-white" src="img/icons/pro-white.png" alt="">
-                        <img class="js-level-polygon" src="img/icons/polygon.png" alt="">
-                        <span class="js-level-text">Пишу сложный JS с нуля</span>
-                    </label>
+                            <span class="js-level-img">
+                                <img class="js-level-white" src="img/icons/normal-white.png" alt="Normal icon">
+                                <img class="js-level-black" src="img/icons/normal-black.png" alt="Normal icon">
+                            </span>
+                        </label>
+
+                        <label class="js-level-label js-level-label--img" for="good">
+                            <input class="js-level-radio" type="radio" name="jsLevel" id="good" value="good">
+
+                            <span class="js-level-img">
+                                <img class="js-level-white" src="img/icons/good-white.png" alt="Normal icon">
+                                <img class="js-level-black" src="img/icons/good-black.png" alt="Normal icon">
+                            </span>
+                        </label>
+
+                        <label class="js-level-label js-level-label--img" for="pro">
+                            <input class="js-level-radio" type="radio" name="jsLevel" id="pro" value="pro" checked>
+
+                            <span class="js-level-img">
+                                <img class="js-level-white" src="img/icons/pro-white.png" alt="Pro icon">
+                                <img class="js-level-black" src="img/icons/pro-black.png" alt="Pro icon">
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="js-level-texts">
+                        <label class="js-level-label js-level-label--text" for="bad">Не владею</label>
+                        <label class="js-level-label js-level-label--text" for="normal">Использую готовые решения</label>
+                        <label class="js-level-label js-level-label--text" for="good">Использую готовые решения и умею их переделывать</label>
+                        <label class="js-level-label js-level-label--text" for="pro">Пишу сложный JS с нуля</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-fieldset">
+                <legend class="form-legend">
+                    <h2>Уровень владения JavaScript, jQuery Задание №2</h2>
+                    <span>Строительный калькулятор. В зависимости от выбранных параметров должен сразу считать стоимость по формуле, указанной в Техническом задании.</span>
+                </legend>
+
+                <div class="calculator">
+                    <div class="calculator-left">
+                        <div class="apartment-area-wrapper">
+                            <div class="range">
+                                <div class="range-input-wrapper">
+                                    <input class="range-input" type="range" min="30" max="100" value="30">
+                                </div>
+
+                                <div class="range-numbers">
+                                    <span class="range-number">
+                                        30м<sup>2</sup>
+                                    </span>
+                                    <span class="range-number">
+                                        40м<sup>2</sup>
+                                    </span>
+                                    <span class="range-number">
+                                        50м<sup>2</sup>
+                                    </span>
+                                    <span class="range-number">
+                                        60м<sup>2</sup>
+                                    </span>
+                                    <span class="range-number">
+                                        70м<sup>2</sup>
+                                    </span>
+                                    <span class="range-number">
+                                        80м<sup>2</sup>
+                                    </span>
+                                    <span class="range-number">
+                                        90м<sup>2</sup>
+                                    </span>
+                                    <span class="range-number">
+                                        100м<sup>2</sup>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <label class="apartment-area-input">
+                                <input type="number" value="30">
+                                <span>м<sup>2</sup></span>
+                            </label>
+                        </div>
+                        <label class="form-label">
+                            <span class="form-label-text">Стоимость:</span>
+                            <span class="form-field form-field--price">
+                                <input class="form-control" type="text" value="45 000 руб." readonly>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="calculator-right">
+                        <div class="calculator-options">
+                            <h3>Тип ремонта:</h3>
+                            <label class="form-label form-label--radio">
+                                <input class="form-radio" type="radio" name="type" value="1" checked>
+                                <span class="form-radio-circle">
+                            <img class="form-radio-disc" src="img/icons/radio-disc.png"
+                                 alt="Checkbox mark icon">
+                            </span>
+                                <span class="form-label-text">Новостройка</span>
+                            </label>
+
+                            <label class="form-label form-label--radio">
+                                <input class="form-radio" type="radio" name="type" value="0.7">
+                                <span class="form-radio-circle">
+                            <img class="form-radio-disc" src="img/icons/radio-disc.png"
+                                 alt="Checkbox mark icon">
+                            </span>
+                                <span class="form-label-text">Вторичное жилье</span>
+                            </label>
+
+                            <label class="form-label form-label--radio">
+                                <input class="form-radio" type="radio" name="type" value="0.5">
+                                <span class="form-radio-circle">
+                            <img class="form-radio-disc" src="img/icons/radio-disc.png"
+                                 alt="Checkbox mark icon">
+                            </span>
+                                <span class="form-label-text">Частный дом</span>
+                            </label>
+                        </div>
+
+                        <div class="calculator-options">
+                            <h3>Тарифы:</h3>
+                            <label class="form-label form-label--radio">
+                                <input class="form-radio" type="radio" name="tariff" value="2500">
+                                <span class="form-radio-circle">
+                            <img class="form-radio-disc" src="img/icons/radio-disc.png"
+                                 alt="Checkbox mark icon">
+                            </span>
+                                <span class="form-label-text">Косметический</span>
+                            </label>
+
+                            <label class="form-label form-label--radio">
+                                <input class="form-radio" type="radio" name="tariff" value="3500">
+                                <span class="form-radio-circle">
+                            <img class="form-radio-disc" src="img/icons/radio-disc.png"
+                                 alt="Checkbox mark icon">
+                            </span>
+                                <span class="form-label-text">Под ключ</span>
+                            </label>
+
+                            <label class="form-label form-label--radio">
+                                <input class="form-radio" type="radio" name="tariff" value="4500">
+                                <span class="form-radio-circle">
+                            <img class="form-radio-disc" src="img/icons/radio-disc.png"
+                                 alt="Checkbox mark icon">
+                            </span>
+                                <span class="form-label-text">Капитальный</span>
+                            </label>
+
+                            <label class="form-label form-label--radio">
+                                <input class="form-radio" type="radio" name="tariff" value="1500" checked>
+                                <span class="form-radio-circle">
+                            <img class="form-radio-disc" src="img/icons/radio-disc.png"
+                                 alt="Checkbox mark icon">
+                            </span>
+                                <span class="form-label-text">Частичный</span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
             </fieldset>
 
@@ -280,22 +421,25 @@
                         будут добавляться автоматически.</span>
                 </legend>
 
-                <div class="about-myself">
-                    <label class="form-label">
-                        <span class="form-field">
-                            <input class="form-control" type="text" value="Ну - ууу - уу ...">
-                        </span>
-                    </label>
-                    <label class="form-label">
-                        <span class="form-field">
-                            <input class="form-control" type="text" value="Ээээ ...">
-                        </span>
-                    </label>
-                    <label class="form-label">
-                        <span class="form-field">
-                            <input class="form-control" type="text" value="">
-                        </span>
-                    </label>
+                <div class="about">
+<!--                    <label class="form-label">-->
+<!--                        <span class="form-field">-->
+<!--                            <input class="form-control" type="text" value="Ну - ууу - уу ..." id="typeInput">-->
+<!--                        </span>-->
+<!--                    </label>-->
+<!--                    <label class="form-label">-->
+<!--                        <span class="form-field">-->
+<!--                            <input class="form-control" type="text" value="Ээээ ...">-->
+<!--                        </span>-->
+<!--                    </label>-->
+<!--                    <label class="form-label">-->
+<!--                        <span class="form-field">-->
+<!--                            <input class="form-control" type="text" value="">-->
+<!--                        </span>-->
+<!--                    </label>-->
+                    <div class="about-input-wrapper">
+                        <div class="about-input" contenteditable="true" data-index="0"></div>
+                    </div>
                 </div>
             </fieldset>
 
@@ -352,13 +496,18 @@
                 <label class="form-label">
                     <span class="form-label-text">Дата заполнения</span>
                     <span class="form-field">
-                        <input class="form-control" type="text" value="01. 01. 2023" name="duration">
+                        <input class="form-control form-control--date" id="time" type="date" name="time">
                     </span>
                 </label>
             </fieldset>
         </form>
     </div>
+
+    <div class="form-decoration form-decoration--top"></div>
+    <div class="form-decoration form-decoration--middle"></div>
+    <div class="form-decoration form-decoration--bottom"></div>
 </div>
 
+<script src="scripts/script.js"></script>
 </body>
 </html>
