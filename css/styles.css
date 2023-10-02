@@ -246,6 +246,8 @@ img {
     flex-grow: 1;
 }
 
+
+
 .form-field::after {
     content: "";
     display: block;
@@ -254,6 +256,19 @@ img {
     background-image: url("../img/decoration/border-decoration.png");
     background-size: auto 2px;
     background-repeat: repeat-x;
+}
+
+
+.form-field__inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 12px;
+    padding-right:12px ;
+}
+
+.form-field__inner span {
+    font-size: 26px;
 }
 
 .form-control {
@@ -267,6 +282,13 @@ img {
     background-color: transparent;
     border: none;
     appearance: none;
+}
+
+
+.form-control--time {
+    width: 3ch;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
 .form-control:focus {
@@ -650,6 +672,6 @@ img {
 }
 
 .form-control--date {
-    width: 160px;
+    width: 170px;
     text-align: center;
 }
