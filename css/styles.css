@@ -1,5 +1,3 @@
-/* Fonts */
-
 @font-face {
     font-display: swap;
     font-family: 'Arkhip';
@@ -78,8 +76,6 @@
     url('../fonts/gilroy_600.svg#Gilroy') format('svg');
 }
 
-/* General styles */
-
 html {
     box-sizing: border-box;
 }
@@ -104,7 +100,7 @@ input {
     background-color: transparent;
 }
 
-input:focus {
+input:focus, select {
     outline: none;
 }
 
@@ -171,7 +167,7 @@ img {
 }
 
 .form-decoration--bottom {
-    bottom: -700px;
+    bottom: -500px;
     left: -500px;
 }
 
@@ -195,7 +191,7 @@ img {
     display: block;
     font-size: 25px;
     font-style: normal;
-    background: url("../img/decoration/logo-decoration.png"), lightgray 50% / contain repeat-y;
+    background: url("../img/decoration/logo-bg.png"), lightgray 50% / contain repeat-y;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
@@ -246,29 +242,14 @@ img {
     flex-grow: 1;
 }
 
-
-
 .form-field::after {
     content: "";
     display: block;
     width: 100%;
     height: 4px;
-    background-image: url("../img/decoration/border-decoration.png");
+    background-image: url("../img/decoration/border.png");
     background-size: auto 2px;
     background-repeat: repeat-x;
-}
-
-
-.form-field__inner{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 12px;
-    padding-right:12px ;
-}
-
-.form-field__inner span {
-    font-size: 26px;
 }
 
 .form-control {
@@ -277,22 +258,11 @@ img {
     height: 36px;
     padding-left: 16px;
     padding-right: 16px;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 200;
     background-color: transparent;
     border: none;
     appearance: none;
-}
-
-
-.form-control--time {
-    width: 3ch;
-    padding-left: 4px;
-    padding-right: 4px;
-}
-
-.form-control:focus {
-    outline: none;
 }
 
 .form-legend {
@@ -400,7 +370,7 @@ img {
     width: 100%;
     height: 4px;
     margin-top: 8px;
-    background-image: url("../img/decoration/border-decoration.png");
+    background-image: url("../img/decoration/border.png");
     background-size: auto 2px;
     background-repeat: repeat-x;
     background-position: left bottom;
@@ -466,7 +436,7 @@ img {
     display: block;
     width: 4px;
     height: 20px;
-    background-image: url(../img/decoration/border-decoration-vertical.png);
+    background-image: url(../img/decoration/border-vertical.png);
     background-size: 2px auto;
     background-repeat: repeat-y;
     margin: 0 auto 10px;
@@ -515,7 +485,7 @@ img {
     display: flex;
     width: 450px;
     height: 4px;
-    background-image: url("../img/decoration/border-decoration.png");
+    background-image: url("../img/decoration/border.png");
     background-repeat: repeat-x;
     background-size: auto 2px;
     background-position: left bottom;
@@ -535,7 +505,6 @@ img {
     height: 4px;
     -webkit-appearance: none;
     background: transparent;
-    outline: none;
     opacity: 1;
     -webkit-transition: .2s;
     transition: opacity .2s;
@@ -572,7 +541,7 @@ img {
     display: block;
     width: 4px;
     height: 12px;
-    background-image: url(../img/decoration/border-decoration-vertical.png);
+    background-image: url(../img/decoration/border-vertical.png);
     background-size: 2px auto;
     background-repeat: repeat-y;
     margin: 0 auto 10px;
@@ -584,7 +553,7 @@ img {
     justify-content: center;
     width: 86px;
     height: 41px;
-    background-image: url("../img/decoration/area-decoration.png");
+    background-image: url("../img/decoration/area-number-input-border.png");
     background-repeat: no-repeat;
     background-size: contain;
     transform: translateY(-12px);
@@ -601,7 +570,7 @@ img {
 }
 
 .apartment-area-input span {
-    transform: translateY(-1.5px);
+    transform: translateY(-1px);
     font-size: 16px;
     font-weight: 500;
 }
@@ -630,7 +599,7 @@ img {
     display: block;
     width: 100%;
     height: 4px;
-    background-image: url("../img/decoration/border-decoration.png");
+    background-image: url("../img/decoration/border.png");
     background-size: auto 2px;
     background-repeat: repeat-x;
     background-position: left bottom;
@@ -661,6 +630,11 @@ img {
 
 .plans .form-label--radio:not(:last-child) {
     margin-right: 127px;
+    margin-bottom: 0;
+}
+
+.form-fieldset--time {
+    margin-bottom: 0;
 }
 
 .form-fieldset--time .form-label:not(:last-child) {
@@ -671,7 +645,20 @@ img {
     flex-grow: 0;
 }
 
+.duration {
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+    font-weight: 300;
+}
+
+.duration input {
+    width: 3ch;
+    padding: 0;
+    text-align: center;
+}
+
 .form-control--date {
-    width: 170px;
+    width: 190px;
     text-align: center;
 }

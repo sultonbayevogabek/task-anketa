@@ -1,14 +1,18 @@
 'use strict';
 document.addEventListener('DOMContentLoaded', () => {
-    // Set today to form filled out time date input
+    /*
+        Set today to form filled out time date input
+    */
     const timeInput = document.querySelector('#time');
     const year = new Date().getFullYear();
     const month = new Date().getMonth();
     const date = new Date().getDate();
-    timeInput.value = `${year}-${month >= 10 ? month : '0' + month}-${date >= 10 ? date : '0' + date}`;
+    timeInput.value = `${ year }-${month >= 10 ? month : '0' + month}-${date >= 10 ? date : '0' + date}`;
 
 
-    // Calculate apartment price
+    /*
+        Calculate apartment price
+    */
     const apartmentAreaSliderInput = document.querySelector('.range-input');
     const apartmentAreaNumberInput = document.querySelector('.apartment-area-input input');
     const apartmentPriceDisplayInput = document.querySelector('.form-field--price input');
@@ -18,8 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let typeRenovation = 1;
 
     function calculateApartmentPrice() {
-        apartmentPriceDisplayInput.value = Intl.NumberFormat('ru-RU', {style: 'decimal'})
-            .format(Math.floor(tariff * apartmentArea / typeRenovation)) + ' руб.';
+        apartmentPriceDisplayInput.value = Intl.NumberFormat('ru-RU', {
+            style: 'decimal'
+        }).format(Math.floor(tariff * apartmentArea / typeRenovation)) + ' руб.';
     }
 
     apartmentAreaSliderInput.addEventListener('input', function () {
@@ -56,48 +61,62 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     })
 
-    // About section
+    /*
+        About section
+    */
     const aboutSection = document.querySelector('.about');
-    function listenInputs() {
-        const aboutInputs = document.querySelectorAll('.about-input');
-        aboutInputs.forEach((input, index) => {
-            input.addEventListener('input', (e) => {
-                if (e.target.clientWidth > 1110) {
-                    if (index === aboutInputs.length - 1) {
-                        aboutSection.innerHTML += `
-                            <div class="about-input-wrapper">
-                                <div class="about-input" contenteditable="true" data-index="${index + 1}"></div>
-                            </div>
-                        `
-                    }
-                    document.querySelector(`div[data-index="${index + 1}"]`).focus()
-                    listenInputs();
-                }
-            })
+    const aboutInput = document.querySelector('#about-input');
 
-            input.addEventListener('keydown', e => {
-                if (e.key === 'Backspace' && !e.target.value?.length && index !== 0) {
-                    e.target.parentElement.remove();
-                    document.querySelector(`div[data-index="${index - 1}"]`).focus()
-                    listenInputs()
-                }
+    aboutInput.addEventListener('input', (e) => {
+        if (e.target.clientWidth > aboutSection.clientWidth - 100) {
+            if (!e.target.parentElement?.nextElementSibling?.classList.contains('about-input-wrapper')) {
+                addNewInput(1);
+                return;
+            }
+            document.querySelector(`div[data-index="1"]`).focus()
+        }
+    })
 
-                if (e.key === 'Enter') {
-                    e.preventDefault();
+    aboutInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+        }
+    })
 
-                    if (index === aboutInputs.length - 1) {
-                        aboutSection.innerHTML += `
-                        <div class="about-input-wrapper">
-                            <div class="about-input" contenteditable="true" data-index="${index + 1}"></div>
-                        </div>
-                    `
-                        document.querySelector(`div[data-index="${index + 1}"]`).focus()
-                        listenInputs()
-                    }
+    function addNewInput(index) {
+        const aboutInputWrapper = document.createElement('div');
+        aboutInputWrapper.classList.add('about-input-wrapper');
+
+        const aboutInput = document.createElement('div');
+        aboutInput.classList.add('about-input');
+        aboutInput.setAttribute('contenteditable', 'true');
+        aboutInput.setAttribute('data-index', index);
+
+        aboutInputWrapper.append(aboutInput);
+        aboutSection.append(aboutInputWrapper);
+
+        aboutInput.focus();
+
+        aboutInput.addEventListener('input', (e) => {
+            const aboutInputs = document.querySelectorAll('.about-input');
+            if (e.target.clientWidth > aboutSection.clientWidth - 100) {
+                if (index === aboutInputs.length - 1) {
+                    addNewInput(index + 1);
+                    return;
                 }
-            })
+                document.querySelector(`div[data-index="${index + 1}"]`).focus()
+            }
+        })
+        aboutInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                return;
+            }
+            const aboutInputs = document.querySelectorAll('.about-input');
+            if (e.key === 'Backspace' && index === aboutInputs.length - 1 && e.target.textContent?.length === 0) {
+                e.target.parentElement.remove();
+                document.querySelector(`div[data-index="${index - 1}"]`).focus();
+            }
         })
     }
-
-    listenInputs();
 })
